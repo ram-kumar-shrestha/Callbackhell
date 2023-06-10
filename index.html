@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call back Hell</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: grid;
+      place-content: center;
+      height: 100svh;
+      background-color: #434343;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    button {
+      width: max-content;
+      height: max-content;
+      font-size: 2rem;
+      padding: 1em 2em;
+      background-color: #217b7e;
+      color: #f1f1f1;
+      border: 0.1em solid #6de4e2;
+      border-radius: 999em;
+      box-shadow: 0.1em 0.1em 0.1em rgb(250 250 250 /0.3);
+      cursor: pointer;
+      transition: all 500ms ease-in-out;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
+
+    button:is(:active) {
+      transform: translate(0.2em, 0.2em);
+    }
+
+    button:not(.btn-1) {
+      display: none;
+    }
+  </style>
+  <body>
+    <button class="btn-1">Click me!</button>
+
+    <button class="btn-2">callback 1</button>
+    <button class="btn-3">callback 2</button>
+    <button class="btn-4">callback 3</button>
+    <button class="btn-5">callback 4</button>
+    <button class="btn-6">callback 5</button>
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- callback hell -->
+    <!-- callback hell with js -->
+    <script src="./callbackhell-js.js"></script>
+
+    <!-- callback hell solution with js -->
+    <!-- <script src="./callbackhell-jssol.js"></script> -->
+
+    <!-- callback hell with jquery -->
+    <!-- <script src="./callbackhell.js"></script> -->
+
+    <!-- callback hell solution with jquery -->
+    <!-- <script src="./callbackhell-sol.js"></script> -->
+  </body>
+</html>
